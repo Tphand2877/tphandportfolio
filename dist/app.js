@@ -1,11 +1,12 @@
+const { t } = window.portfolioLocale;
 const menuButton = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('#mobile-nav');
-function closeMenu() { mobileNav.hidden = true; menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'Mở menu'); }
+function closeMenu() { mobileNav.hidden = true; menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', t('menuOpen')); }
 menuButton.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   mobileNav.hidden = isOpen;
   menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Mở menu' : 'Đóng menu');
+  menuButton.setAttribute('aria-label', t(isOpen ? 'menuOpen' : 'menuClose'));
 });
 mobileNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
 document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
@@ -17,8 +18,12 @@ document.querySelectorAll('.filter').forEach(button => button.addEventListener('
   let count = 0;
   cards.forEach(card => { card.hidden = category !== 'all' && card.dataset.category !== category; if (!card.hidden) count++; });
   gallery.classList.toggle('is-filtered', category !== 'all');
-  document.querySelector('.gallery-count').textContent = `${String(count).padStart(2, '0')} KHUNG HÌNH`;
+  updateGalleryCount();
 }));
+function updateGalleryCount() {
+  const count = cards.filter(card => !card.hidden).length;
+  document.querySelector('.gallery-count').textContent = `${String(count).padStart(2, '0')} ${t('frames')}`;
+}
 const dialog = document.querySelector('.lightbox');
 let activeCard;
 function showPhoto(card) {
@@ -27,7 +32,7 @@ function showPhoto(card) {
   image.src = card.dataset.image;
   image.alt = card.querySelector('img').alt;
   document.querySelector('#lightbox-title').textContent = card.dataset.title;
-  document.querySelector('#lightbox-category').textContent = card.dataset.type + ' / ẢNH MINH HỌA';
+  document.querySelector('#lightbox-category').textContent = card.dataset.type + ' / ' + t('sample');
   const visible = cards.filter(c => !c.hidden);
   document.querySelector('#lightbox-index').textContent = `${visible.indexOf(card) + 1} / ${visible.length}`;
 }
@@ -42,9 +47,14 @@ dialog.addEventListener('keydown', event => { if (event.key === 'ArrowLeft') { e
 let toastTimer;
 function toast(message) { const element = document.querySelector('.toast'); element.textContent = message; element.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => element.classList.remove('show'), 3500); }
 document.querySelector('.copy-email').addEventListener('click', async () => {
-  try { await navigator.clipboard.writeText('phanducthuan287@gmail.com'); toast('Đã sao chép địa chỉ email.'); }
-  catch { toast('Bạn có thể sao chép: phanducthuan287@gmail.com'); }
+  try { await navigator.clipboard.writeText('phanducthuan287@gmail.com'); toast(t('copied')); }
+  catch { toast(t('copyFallback')); }
 });
+document.addEventListener('portfolio:languagechange', () => {
+  updateGalleryCount();
+  if (dialog.open && activeCard) showPhoto(activeCard);
+});
+updateGalleryCount();
 document.querySelector('#year').textContent = new Date().getFullYear();
 const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { document.querySelectorAll('.desktop-nav a').forEach(link => { if (link.hash === `#${entry.target.id}`) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); }); } }); }, { rootMargin: '-20% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach(section => observer.observe(section));

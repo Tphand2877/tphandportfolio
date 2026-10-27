@@ -10,21 +10,28 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://peter-phan-portfolio-m7k2.well-ghost-2977.chatgpt.site">
   <link rel="canonical" href="https://peter-phan-portfolio-m7k2.well-ghost-2977.chatgpt.site">
-  <title>Peter Phan — Photography & Technology</title>
+  <title>Thuận Phan — Nhiếp ảnh & Công nghệ</title>
+  <script src="preferences.js"></script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;450;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="themes.css">
+  <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Đến nội dung chính</a>
   <header class="header">
-    <a class="brand" href="#home" aria-label="Peter Phan — Trang đầu"><span class="monogram">p<span>p</span><i></i></span><span>PETER PHAN<small>VISUALS & TECHNOLOGY</small></span></a>
+    <a class="brand" href="#home" aria-label="Thuận Phan — Trang đầu"><span class="monogram" aria-hidden="true">p<span>p</span><i></i></span><span class="brand-wordmark">THUẬN PHAN<small>THỊ GIÁC & CÔNG NGHỆ</small></span></a>
     <nav class="desktop-nav" aria-label="Điều hướng chính"><a href="#about">Về mình</a><a href="#work">Góc nhìn</a><a href="#journey">Hành trình</a></nav>
-    <a class="header-contact" href="#contact">Kết nối <span aria-hidden="true">↗</span></a>
-    <button class="menu-toggle" aria-label="Mở menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="Ngôn ngữ"><button data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button><span aria-hidden="true">/</span><button data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
+      <button class="theme-toggle" aria-label="Chuyển sang chế độ sáng" aria-pressed="false" title="Chuyển sang chế độ sáng"><svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg><span class="theme-label">Sáng</span></button>
+      <a class="header-contact" href="#contact">Kết nối <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" aria-label="Mở menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
+    </div>
   </header>
   <nav id="mobile-nav" class="mobile-nav" aria-label="Điều hướng di động" hidden><a href="#about">Về mình</a><a href="#work">Góc nhìn</a><a href="#journey">Hành trình</a><a href="#contact">Kết nối</a></nav>
   <main id="main">
@@ -32,7 +39,7 @@
       <div class="hero-lines" aria-hidden="true"></div>
       <div class="hero-content">
         <div class="eyebrow"><span class="tiny-cross">+</span> PHOTOGRAPHY × TECHNOLOGY</div>
-        <h1 id="hero-title">Peter <em>Phan.</em></h1>
+        <h1 id="hero-title">Thuận <em>Phan.</em></h1>
         <div class="hero-rule"></div>
         <p class="hero-statement">Góc nhìn nghệ thuật.<br>Tư duy công nghệ.</p>
         <p class="hero-description">Mình là Thuận Phan — thợ ảnh bán chuyên và sinh viên Công nghệ thông tin quốc tế. Khám phá thế giới qua ống kính, xây dựng ý tưởng bằng công nghệ.</p>
@@ -71,7 +78,7 @@
     </section>
     <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="section-index"><span>04 — KẾT NỐI</span><span>GOOD THINGS START WITH A HELLO</span></div><div class="contact-top"><div class="eyebrow"><span class="tiny-cross">+</span> LET'S CREATE SOMETHING MEANINGFUL</div><h2 id="contact-title">Một ý tưởng hay<br>bắt đầu bằng <em>lời chào.</em></h2><p>Trao đổi về nhiếp ảnh, công nghệ hay một dự án thú vị?<br>Mình luôn sẵn lòng lắng nghe.</p></div><div class="contact-bottom"><a class="email-link" href="mailto:phanducthuan287@gmail.com">phanducthuan287@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-email" aria-label="Sao chép địa chỉ email"><span class="copy-icon" aria-hidden="true">▣</span> Sao chép email</button></div></section>
   </main>
-  <footer class="footer"><a class="footer-name" href="#home">PETER PHAN<span>PHOTOGRAPHY & TECHNOLOGY</span></a><span>© <span id="year">2026</span> Thuận Phan.</span><a href="#home">VỀ ĐẦU TRANG <span aria-hidden="true">↑</span></a></footer>
+  <footer class="footer"><a class="footer-name" href="#home">THUẬN PHAN<span>NHIẾP ẢNH & CÔNG NGHỆ</span></a><span>© <span id="year">2026</span> <span class="copyright-name">Thuận Phan.</span></span><a href="#home">VỀ ĐẦU TRANG <span aria-hidden="true">↑</span></a></footer>
   <dialog class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-category"></span><button class="lightbox-close" aria-label="Đóng ảnh">ĐÓNG <span aria-hidden="true">×</span></button></div><div class="lightbox-image-wrap"><button class="lightbox-prev" aria-label="Ảnh trước">←</button><img id="lightbox-image" src="assets/architecture.jpg" alt=""><button class="lightbox-next" aria-label="Ảnh tiếp theo">→</button></div><div class="lightbox-bottom"><h2 id="lightbox-title"></h2><p>Ảnh minh họa từ Unsplash · Không phải tác phẩm của Thuận Phan.</p><span id="lightbox-index"></span></div></dialog>
   <div class="toast" role="status" aria-live="polite"></div>
 </body>
