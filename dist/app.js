@@ -436,6 +436,40 @@
     }
   }
 
+  function initScrollReveal() {
+    const targets = [
+      document.querySelector('.milestone-highlights'),
+      document.querySelector('#techsupport'),
+      document.querySelector('#busgo'),
+      document.querySelector('#about'),
+      document.querySelector('#work'),
+      document.querySelector('#contact')
+    ].filter(Boolean);
+
+    document.querySelectorAll('.milestone-link, .about-facts > div, .gear-card, .photo-card').forEach(el => {
+      el.classList.add('stagger-child');
+    });
+
+    targets.forEach(el => el.classList.add('reveal-on-scroll'));
+
+    if (!motionQuery || motionQuery.matches || typeof window.IntersectionObserver !== 'function') {
+      targets.forEach(el => el.classList.add('is-revealed'));
+      return;
+    }
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+
+    targets.forEach(el => revealObserver.observe(el));
+  }
+  initScrollReveal();
+
   function updateScrollState() {
     scrollFramePending = false;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
