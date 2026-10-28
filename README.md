@@ -1,6 +1,6 @@
-# Peter Phan (Thuận Phan) — Portfolio · Executive Neo-Futurism 2.0
+# Peter Phan (Thuận Phan) — Portfolio 
 
-Portfolio VI/EN của Peter Phan (Thuận Phan) theo triết lý thiết kế **Executive Neo-Futurism 2.0** (75% Executive Noir Luxury + 25% High-Tech Futurism): *"Designed for Power. Engineered for the Future."* Định hướng Kỹ sư cầu nối (Bridge System Engineer — BrSE), Game Development và sáng lập công nghệ. Sử dụng HTML/CSS/JavaScript thuần, không runtime dependency, tối ưu hiệu năng và khả năng truy cập WCAG 2.2 AA.
+Portfolio VI/EN của Peter Phan (Thuận Phan) theo triết lý thiết kế **Executive Neo-Futurism**: *"Designed for Power. Engineered for the Future."* Định hướng Kỹ sư cầu nối (Bridge System Engineer — BrSE), Game Development và sáng lập công nghệ. Sử dụng HTML/CSS/JavaScript thuần, không runtime dependency, tối ưu hiệu năng và khả năng truy cập WCAG 2.2 AA.
 
 ## Chạy và kiểm tra
 
