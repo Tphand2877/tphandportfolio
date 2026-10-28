@@ -3,83 +3,536 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101110">
-  <meta name="description" content="Thuận Phan (Peter Phan) — thợ ảnh bán chuyên, sinh viên năm 2 ngành Công nghệ thông tin quốc tế. Nơi góc nhìn nghệ thuật gặp tư duy công nghệ.">
-  <meta property="og:title" content="Peter Phan — Photography & Technology">
-  <meta property="og:description" content="Góc nhìn nghệ thuật. Tư duy công nghệ. Portfolio cá nhân của Thuận Phan.">
+  <meta name="theme-color" content="#08090B">
+  <meta name="description" data-i18n-content="meta.description" content="Thuận Phan — sinh viên CNTT Quốc tế tại ICTU, người sáng lập TechSupport và nhiếp ảnh bán chuyên. Dự án, tác phẩm và hành trình cá nhân.">
+  <meta property="og:title" data-i18n-content="meta.title" content="Thuận Phan — Công nghệ & Nhiếp ảnh">
+  <meta property="og:description" data-i18n-content="meta.description" content="Thuận Phan — sinh viên CNTT Quốc tế tại ICTU, người sáng lập TechSupport và nhiếp ảnh bán chuyên. Dự án, tác phẩm và hành trình cá nhân.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://peter-phan-portfolio-m7k2.well-ghost-2977.chatgpt.site">
-  <link rel="canonical" href="https://peter-phan-portfolio-m7k2.well-ghost-2977.chatgpt.site">
-  <title>Thuận Phan — Nhiếp ảnh & Công nghệ</title>
+  <meta property="og:url" content="https://tphand2877.github.io/ThuanPhans-Portfolio/">
+  <meta property="og:locale" content="vi_VN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://tphand2877.github.io/ThuanPhans-Portfolio/assets/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" data-i18n-content="meta.imageAlt" content="Thuận Phan — Công nghệ và nhiếp ảnh, ICTU và TechSupport">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" data-i18n-content="meta.title" content="Thuận Phan — Công nghệ & Nhiếp ảnh">
+  <meta name="twitter:description" data-i18n-content="meta.description" content="Thuận Phan — sinh viên CNTT Quốc tế tại ICTU, người sáng lập TechSupport và nhiếp ảnh bán chuyên. Dự án, tác phẩm và hành trình cá nhân.">
+  <meta name="twitter:image" content="https://tphand2877.github.io/ThuanPhans-Portfolio/assets/social-card.jpg">
+  <meta name="twitter:image:alt" data-i18n-content="meta.imageAlt" content="Thuận Phan — Công nghệ và nhiếp ảnh, ICTU và TechSupport">
+  <link rel="canonical" href="https://tphand2877.github.io/ThuanPhans-Portfolio/">
+  <title data-i18n="meta.title">Thuận Phan — Công nghệ & Nhiếp ảnh</title>
   <script src="preferences.js"></script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;450;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="themes.css">
   <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Đến nội dung chính</a>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Đến nội dung chính</a>
+
   <header class="header">
-    <a class="brand" href="#home" aria-label="Thuận Phan — Trang đầu"><span class="monogram" aria-hidden="true">p<span>p</span><i></i></span><span class="brand-wordmark">THUẬN PHAN<small>THỊ GIÁC & CÔNG NGHỆ</small></span></a>
-    <nav class="desktop-nav" aria-label="Điều hướng chính"><a href="#about">Về mình</a><a href="#work">Góc nhìn</a><a href="#journey">Hành trình</a></nav>
+    <a class="brand" href="#home" aria-label="Thuận Phan — Trang đầu" data-i18n-label="nav.home">
+      <span class="monogram" aria-hidden="true">p<span>p</span><i></i></span>
+      <span class="brand-wordmark" data-i18n="brand">THUẬN PHAN<small>LẬP TRÌNH - CÔNG NGHỆ - NHIẾP ẢNH</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Điều hướng chính" data-i18n-label="nav.main">
+      <a href="#projects" data-i18n="nav.projects">Dự án</a>
+      <a href="#about" data-i18n="nav.about">Về mình</a>
+      <a href="#work" data-i18n="nav.photos">Nhiếp ảnh</a>
+      <a href="#journey" data-i18n="nav.journey">Hành trình</a>
+      <a href="#contact" data-i18n="nav.contact">Kết nối</a>
+    </nav>
     <div class="header-actions">
-      <div class="language-switch" role="group" aria-label="Ngôn ngữ"><button data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button><span aria-hidden="true">/</span><button data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button></div>
-      <button class="theme-toggle" aria-label="Chuyển sang chế độ sáng" aria-pressed="false" title="Chuyển sang chế độ sáng"><svg class="sun-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><svg class="moon-icon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg><span class="theme-label">Sáng</span></button>
-      <a class="header-contact" href="#contact">Kết nối <span aria-hidden="true">↗</span></a>
+      <div class="language-switch" role="group" aria-label="Ngôn ngữ" data-i18n-label="nav.language">
+        <span class="lang-slider" aria-hidden="true"></span>
+        <button data-language="vi" lang="vi" aria-label="Tiếng Việt" aria-pressed="true">VI</button>
+        <button data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-toggle" aria-label="Chuyển sang chế độ sáng" aria-pressed="false" title="Chuyển sang chế độ sáng">
+        <span class="theme-icon-wrap" aria-hidden="true">
+          <svg class="sun-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          <svg class="moon-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+        </span>
+        <span class="theme-label">Sáng</span>
+      </button>
       <button class="menu-toggle" aria-label="Mở menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
-  <nav id="mobile-nav" class="mobile-nav" aria-label="Điều hướng di động" hidden><a href="#about">Về mình</a><a href="#work">Góc nhìn</a><a href="#journey">Hành trình</a><a href="#contact">Kết nối</a></nav>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Điều hướng di động" data-i18n-label="nav.mobile" hidden>
+    <a href="#projects" data-i18n="nav.projects">Dự án</a>
+    <a href="#about" data-i18n="nav.about">Về mình</a>
+    <a href="#work" data-i18n="nav.photos">Nhiếp ảnh</a>
+    <a href="#journey" data-i18n="nav.journey">Hành trình</a>
+    <a href="#contact" data-i18n="nav.contact">Kết nối</a>
+  </nav>
+
   <main id="main">
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="hero-lines" aria-hidden="true"></div>
       <div class="hero-content">
-        <div class="eyebrow"><span class="tiny-cross">+</span> PHOTOGRAPHY × TECHNOLOGY</div>
-        <h1 id="hero-title">Thuận <em>Phan.</em></h1>
+        <div class="eyebrow"><span lang="vi">Tôi là:</span> <span aria-hidden="true">·</span> <span lang="en">I am:</span> <span aria-hidden="true">·</span> <span lang="fr">Je suis :</span> <span aria-hidden="true">·</span> <span lang="ja">私は：</span> <span aria-hidden="true">·</span> <span lang="zh">我是：</span></div>
+        <h1 id="hero-title" data-i18n="hero.name">Thuận <em>Phan.</em></h1>
         <div class="hero-rule"></div>
-        <p class="hero-statement">Góc nhìn nghệ thuật.<br>Tư duy công nghệ.</p>
-        <p class="hero-description">Mình là Thuận Phan — thợ ảnh bán chuyên và sinh viên Công nghệ thông tin quốc tế. Khám phá thế giới qua ống kính, xây dựng ý tưởng bằng công nghệ.</p>
-        <a class="button button-gold" href="#work">Khám phá góc nhìn <span aria-hidden="true">↗</span></a>
+        <p class="hero-statement" data-i18n="hero.statement">Thiết kế sức mạnh.<br>Kiến tạo tương lai.</p>
+        <p class="hero-description" data-i18n="hero.description">Sinh viên năm 2 chuyên ngành CNTT Quốc tế tại ICTU, Founder TechSupport. Định hướng Bridge System Engineer (BrSE) và Game Development, kết hợp năng lực kỹ thuật, tư duy hệ thống và thẩm mỹ công nghệ đỉnh cao.</p>
+        <ul class="hero-profile" aria-label="Thông tin cá nhân" data-i18n-label="hero.profileLabel">
+          <li><span class="hero-profile-label" data-i18n="hero.dobLabel">NGÀY SINH</span><strong>28/07/2007</strong></li>
+          <li><span class="hero-profile-label" data-i18n="hero.genderLabel">GIỚI TÍNH</span><strong data-i18n="hero.gender">Nam</strong></li>
+          <li><span class="hero-profile-label" data-i18n="hero.originLabel">QUÊ QUÁN</span><strong data-i18n="hero.origin">Nam Định — Ninh Bình</strong></li>
+          <li><span class="hero-profile-label" data-i18n="hero.phoneLabel">ĐIỆN THOẠI</span><a href="tel:+84916426992"><strong>+84.916.426.992</strong></a></li>
+          <li><span class="hero-profile-label" data-i18n="hero.emailLabel">EMAIL</span><a href="mailto:phanducthuan287@gmail.com"><strong>phanducthuan287@gmail.com</strong></a></li>
+        </ul>
+        <div class="hero-actions">
+          <a class="button button-gold" href="#techsupport" data-i18n="hero.projects">Khám phá TechSupport <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="assets/Thuan-Phan_CV.pdf" download aria-label="Tải CV tiếng Việt (PDF)" data-i18n-label="hero.cvLabel" data-i18n-href="hero.cvHref" data-i18n="hero.cv">Tải CV · VI <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/Tphand2877" target="_blank" rel="noopener noreferrer" aria-label="Xem hồ sơ GitHub của Tphand2877 (tab mới)" data-i18n-label="contact.githubLabel">GitHub / Tphand2877 <span aria-hidden="true">↗</span></a>
+          <a href="#work" data-i18n="hero.photos">Xem bộ ảnh</a>
+        </div>
       </div>
-      <div class="hero-visual">
-        <img src="assets/architecture.jpg" width="1200" height="1600" fetchpriority="high" alt="Ảnh minh họa kiến trúc với đường nét hình học và ánh sáng tương phản">
-        <div class="image-overlay"></div>
-        <span class="visual-corner top-left" aria-hidden="true"></span><span class="visual-corner bottom-right" aria-hidden="true"></span>
-        <span class="vertical-label">LIGHT. FORM. PERSPECTIVE.</span>
-        <div class="image-caption"><span>01 / STUDY OF LIGHT</span><span>ẢNH MINH HỌA</span></div>
-        <div class="lens-label"><span class="lens-symbol" aria-hidden="true">◎</span><span>MỘT GÓC NHÌN KHÁC<small>THROUGH MY PERSPECTIVE</small></span></div>
-      </div>
-      <div class="hero-bottom"><a href="#about"><span class="scroll-line" aria-hidden="true"></span>CUỘN ĐỂ KHÁM PHÁ</a><span>CREATIVE MIND. CURIOUS SOUL.</span><span class="edition">PORTFOLIO / 2026</span></div>
+      <figure class="hero-visual">
+        <div class="hero-image-wrap">
+          <img src="assets/hero-portrait-960.webp" srcset="assets/hero-portrait-480.webp 480w, assets/hero-portrait-960.webp 960w, assets/hero-portrait-1600.webp 1600w" sizes="(max-width: 550px) 90vw, (max-width: 1050px) 620px, 490px" width="1728" height="1728" fetchpriority="high" alt="Thuận Phan bên laptop và sổ tay" data-i18n-alt="hero.portraitAlt">
+          <span class="visual-corner top-left" aria-hidden="true"></span><span class="visual-corner bottom-right" aria-hidden="true"></span>
+        </div>
+        <figcaption class="hero-portrait-caption"><strong data-i18n="name">THUẬN PHAN</strong><span data-i18n="hero.portraitCaption">Học hỏi, từng ngày.<br>Tư liệu cá nhân.</span></figcaption>
+      </figure>
     </section>
-    <div class="discipline-strip" aria-hidden="true"><span>PHOTOGRAPHY</span><i>✳</i><span>INFORMATION TECHNOLOGY</span><i>✳</i><span>VISUAL STORYTELLING</span><i>✳</i><span>ALWAYS EXPLORING</span></div>
+
+    <nav class="milestone-highlights" aria-label="Ba cột mốc nổi bật" data-i18n-label="highlights.label">
+      <a class="milestone-link" href="#chapter-4">
+        <span class="milestone-kicker" data-i18n="highlights.prizeKicker">TIN HỌC THI ĐẤU</span>
+        <strong data-i18n="highlights.prizeTitle">Giải Nhất cấp tỉnh</strong>
+        <span class="milestone-detail" data-i18n="highlights.prizeDetail">Kỳ thi Học sinh giỏi Tin học · Lớp 9</span>
+        <span class="milestone-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="milestone-link" href="#techsupport">
+        <span class="milestone-kicker">FOUNDER & CEO</span>
+        <strong>TechSupport</strong>
+        <span class="milestone-detail" data-i18n="highlights.founderDetail">S2S · Sinh viên hỗ trợ sinh viên</span>
+        <span class="milestone-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="milestone-link" href="#chapter-10">
+        <span class="milestone-kicker" data-i18n="highlights.mobilityKicker">TRẢI NGHIỆM QUỐC TẾ</span>
+        <strong>INTI Malaysia</strong>
+        <span class="milestone-detail" data-i18n="highlights.mobilityDetail">Mobility ngành CNTT · 2026</span>
+        <span class="milestone-arrow" aria-hidden="true">↗</span>
+      </a>
+    </nav>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-index"><span id="projects-title" data-i18n="projects.index">01 — DỰ ÁN NỔI BẬT</span><span data-i18n="projects.context">CÔNG NGHỆ PHỤC VỤ CON NGƯỜI</span></div>
+      <article class="techsupport-showcase" id="techsupport" aria-labelledby="techsupport-title">
+        <header class="techsupport-intro">
+          <div>
+            <p class="project-kicker" data-i18n="techsupport.kicker">SÁNG KIẾN SINH VIÊN · ĐANG HOẠT ĐỘNG</p>
+            <h2 id="techsupport-title">Tech<em>Support.</em></h2>
+            <p class="techsupport-tagline" data-i18n="techsupport.tagline">Chuẩn hóa thiết bị học tập.<br>Đồng hành cùng sinh viên.</p>
+          </div>
+          <div>
+            <p class="techsupport-summary" data-i18n="techsupport.summary">Hỗ trợ công nghệ từ sinh viên, dành cho sinh viên Đại học Thái Nguyên. TechSupport kết hợp cài đặt và tối ưu phần mềm, bảo trì máy tính, tư vấn linh kiện với một website giới thiệu dịch vụ, bảng giá và đặt lịch.</p>
+            <ul class="techsupport-stack" aria-label="Đặc điểm TechSupport" data-i18n-label="techsupport.stackLabel"><li data-i18n="techsupport.tagModel">Mô hình S2S</li><li data-i18n="techsupport.tagRole">Founder & CEO</li><li data-i18n="techsupport.tagOs">Tối ưu hệ điều hành</li><li data-i18n="techsupport.tagHw">Bảo trì phần cứng</li><li data-i18n="techsupport.tagSchool">Đại học Thái Nguyên</li></ul>
+            <div class="project-actions">
+              <a class="button button-gold" href="https://tphand2877.github.io/techsupport/index.html" target="_blank" rel="noopener noreferrer" aria-label="Mở website TechSupport (tab mới)" data-i18n-label="techsupport.visitLabel" data-i18n-href="techsupport.visitHref" data-i18n="techsupport.visit">Mở website TechSupport <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="#techsupport-modules" data-i18n="techsupport.exploreModules">Khám phá dịch vụ & bảng giá <span aria-hidden="true">↓</span></a>
+              <a class="techsupport-source" href="#chapter-9" data-i18n="techsupport.story">Câu chuyện khởi đầu <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </header>
+
+        <figure class="techsupport-cover techsupport-screen">
+          <a class="techsupport-image-link" data-ts-screen="home" href="assets/ts-home-vi.webp" aria-haspopup="dialog">
+            <img src="assets/ts-home-vi.webp" srcset="assets/ts-home-vi-800.webp 800w, assets/ts-home-vi.webp 1600w" sizes="90vw" width="1600" height="766" loading="lazy" decoding="async" alt="Trang chủ TechSupport với giới thiệu mô hình S2S và các mục dịch vụ" data-i18n-alt="techsupport.homeAlt">
+            <span class="techsupport-expand" data-i18n="techsupport.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span>
+          </a>
+          <figcaption><span class="techsupport-screen-title" data-i18n="techsupport.homeCaption">Giao diện TechSupport · Trang chủ & giới thiệu mô hình S2S</span><span data-i18n="techsupport.captureNote">Ảnh chụp từ website đang hoạt động</span></figcaption>
+        </figure>
+
+        <section class="techsupport-modules" id="techsupport-modules" aria-labelledby="techsupport-modules-title">
+          <div class="techsupport-section-heading">
+            <div><p class="project-kicker" data-i18n="techsupport.modulesKicker">01 / DỊCH VỤ & BẢNG GIÁ</p><h3 id="techsupport-modules-title" data-i18n="techsupport.modulesTitle">Từ nhu cầu học tập đến bảng giá học đường.</h3></div>
+            <p data-i18n="techsupport.modulesSummary">Website công khai các gói dịch vụ phần mềm, bảng giá học đường minh bạch và đội ngũ kỹ thuật sinh viên. Chọn từng màn hình bên dưới để khám phá.</p>
+          </div>
+          <div class="techsupport-tabs" role="tablist" aria-label="Màn hình TechSupport" data-i18n-label="techsupport.tabsLabel" hidden>
+            <button type="button" id="ts-tab-services" role="tab" aria-controls="ts-panel-services" aria-selected="true" data-i18n="techsupport.servicesTab">Dịch vụ</button>
+            <button type="button" id="ts-tab-pricing" role="tab" aria-controls="ts-panel-pricing" aria-selected="false" tabindex="-1" data-i18n="techsupport.pricingTab">Bảng giá</button>
+            <button type="button" id="ts-tab-team" role="tab" aria-controls="ts-panel-team" aria-selected="false" tabindex="-1" data-i18n="techsupport.teamTab">Đội ngũ</button>
+          </div>
+          <figure class="techsupport-screen techsupport-panel" id="ts-panel-services">
+            <div class="techsupport-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ danh mục dịch vụ" data-i18n-label="techsupport.servicesScroll">
+              <a class="techsupport-image-link" data-ts-screen="services" href="assets/ts-services-vi.webp" aria-haspopup="dialog"><img src="assets/ts-services-vi.webp" srcset="assets/ts-services-vi-800.webp 800w, assets/ts-services-vi.webp 1600w" sizes="90vw" width="1600" height="804" loading="lazy" decoding="async" alt="Khu vực dịch vụ TechSupport: máy mới về dinh, hồi sinh máy cũ và tư vấn linh kiện" data-i18n-alt="techsupport.servicesAlt"><span class="techsupport-expand" data-i18n="techsupport.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="techsupport-screen-title" data-i18n="techsupport.servicesCaption">Dịch vụ · Cài đặt, bảo trì và linh kiện</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+          <figure class="techsupport-screen techsupport-panel" id="ts-panel-pricing">
+            <div class="techsupport-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem bảng giá chi tiết" data-i18n-label="techsupport.pricingScroll">
+              <a class="techsupport-image-link" data-ts-screen="pricing" href="assets/ts-pricing-vi.webp" aria-haspopup="dialog"><img src="assets/ts-pricing-vi.webp" srcset="assets/ts-pricing-vi-800.webp 800w, assets/ts-pricing-vi.webp 1600w" sizes="90vw" width="1600" height="2138" loading="lazy" decoding="async" alt="Bảng giá dịch vụ học đường chi tiết của TechSupport" data-i18n-alt="techsupport.pricingAlt"><span class="techsupport-expand" data-i18n="techsupport.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="techsupport-screen-title" data-i18n="techsupport.pricingCaption">Bảng giá · Kỹ thuật chuẩn, giá học đường</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+          <figure class="techsupport-screen techsupport-panel" id="ts-panel-team">
+            <div class="techsupport-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem câu chuyện và đội ngũ sáng lập" data-i18n-label="techsupport.teamScroll">
+              <a class="techsupport-image-link" data-ts-screen="team" href="assets/ts-team-vi.webp" aria-haspopup="dialog"><img src="assets/ts-team-vi.webp" srcset="assets/ts-team-vi-800.webp 800w, assets/ts-team-vi.webp 1600w" sizes="90vw" width="1600" height="2028" loading="lazy" decoding="async" alt="Câu chuyện khởi đầu và đội ngũ sáng lập: Phan Đức Thuận CEO và Tô Anh Tấn Co-Founder" data-i18n-alt="techsupport.teamAlt"><span class="techsupport-expand" data-i18n="techsupport.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="techsupport-screen-title" data-i18n="techsupport.teamCaption">Đội ngũ sáng lập · Câu chuyện sinh viên S2S</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="techsupport-booking" aria-labelledby="techsupport-booking-title">
+          <div class="techsupport-booking-copy">
+            <p class="project-kicker" data-i18n="techsupport.bookingKicker">02 / ĐẶT LỊCH & TRA CỨU</p>
+            <h3 id="techsupport-booking-title" data-i18n="techsupport.bookingTitle">Hỗ trợ tận nơi.<br>An tâm học tập.</h3>
+            <p data-i18n="techsupport.bookingSummary">Quy trình hỗ trợ trực tiếp tại phòng trọ hoặc ký túc xá Đại học Thái Nguyên, kết nối đặt lịch Google Calendar và tra cứu tiến độ sửa chữa theo mã TSxxx.</p>
+            <ul class="techsupport-capabilities">
+              <li data-i18n="techsupport.capCalendar">Đặt lịch qua Google Calendar theo khung giờ</li>
+              <li data-i18n="techsupport.capTracking">Tra cứu trạng thái thiết bị theo mã TSxxx</li>
+              <li data-i18n="techsupport.capWarranty">Bảo hành trách nhiệm 1 tuần cho dịch vụ phần mềm</li>
+              <li data-i18n="techsupport.capOnsite">Hỗ trợ trực tiếp tại ký túc xá hoặc phòng trọ</li>
+            </ul>
+          </div>
+          <figure class="techsupport-screen">
+            <div class="techsupport-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ giao diện đặt lịch và tra cứu" data-i18n-label="techsupport.bookingScroll">
+              <a class="techsupport-image-link" data-ts-screen="booking" href="assets/ts-booking-vi.webp" aria-haspopup="dialog"><img src="assets/ts-booking-vi.webp" srcset="assets/ts-booking-vi-800.webp 800w, assets/ts-booking-vi.webp 1600w" sizes="(max-width: 800px) 90vw, 60vw" width="1600" height="1179" loading="lazy" decoding="async" alt="Giao diện đặt lịch hẹn Google Calendar và ô tra cứu trạng thái thiết bị TechSupport" data-i18n-alt="techsupport.bookingAlt"><span class="techsupport-expand" data-i18n="techsupport.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="techsupport-screen-title" data-i18n="techsupport.bookingCaption">Đặt lịch & Tra cứu · Lịch hẹn và tiến độ thiết bị</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+        </section>
+        <p class="techsupport-demo-note" data-i18n="techsupport.note">TechSupport là sáng kiến sinh viên hỗ trợ sinh viên tại ĐH Thái Nguyên; website đang hoạt động tại tphand2877.github.io/techsupport.</p>
+      </article>
+
+      <article class="busgo-showcase" id="busgo" aria-labelledby="busgo-title">
+        <header class="busgo-intro">
+          <div>
+            <p class="project-kicker" data-i18n="busgo.kicker">DỰ ÁN TIÊU BIỂU · WEB APP</p>
+            <h2 id="busgo-title">Bus<em>Go.</em></h2>
+            <p class="busgo-tagline" data-i18n="busgo.tagline">Từ một chỗ ngồi.<br>Đến cả một hành trình.</p>
+          </div>
+          <div>
+            <p class="busgo-summary" data-i18n="busgo.summary">Một web app, hai không gian: đặt vé cho hành khách và điều hành cho bến xe. BusGo đưa hệ thống desktop WPF lên web, kết nối tìm chuyến, chọn ghế và quản lý vận hành trên cùng nền tảng.</p>
+            <ul class="busgo-stack" aria-label="Công nghệ BusGo" data-i18n-label="busgo.stackLabel"><li>ASP.NET Core</li><li>Razor Pages</li><li>SQL Server</li></ul>
+            <div class="project-actions">
+              <a class="button button-gold" href="#busgo-admin" data-i18n="busgo.exploreAdmin">Khám phá khu quản trị <span aria-hidden="true">↓</span></a>
+              <a class="busgo-source" href="https://github.com/Tphand2877/BusGo" target="_blank" rel="noopener noreferrer" aria-label="Xem mã nguồn BusGo trên GitHub (tab mới)" data-i18n-label="busgo.sourceLabel" data-i18n="busgo.source">Mã nguồn GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </header>
+
+        <figure class="busgo-cover busgo-screen">
+          <a class="busgo-image-link" data-busgo-screen="home" href="assets/busgo-home-vi-dark.webp" aria-haspopup="dialog">
+            <img src="assets/busgo-home-vi-dark.webp" srcset="assets/busgo-home-vi-dark-800.webp 800w, assets/busgo-home-vi-dark.webp 1600w" sizes="90vw" width="1600" height="1111" loading="lazy" decoding="async" alt="Trang chủ BusGo với khung tìm chuyến và hình ảnh Vịnh Hạ Long" data-i18n-alt="busgo.homeAlt">
+            <span class="busgo-expand" data-i18n="busgo.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span>
+          </a>
+          <figcaption><span class="busgo-screen-title" data-i18n="busgo.homeCaption">Giao diện hành khách · Trang chủ & tìm chuyến</span><span data-i18n="busgo.captureNote">Ảnh chụp trực tiếp từ web app</span></figcaption>
+        </figure>
+
+        <section class="busgo-admin" id="busgo-admin" aria-labelledby="busgo-admin-title">
+          <div class="busgo-section-heading">
+            <div><p class="project-kicker" data-i18n="busgo.adminKicker">01 / KHÔNG GIAN QUẢN TRỊ</p><h3 id="busgo-admin-title" data-i18n="busgo.adminTitle">Phía sau mỗi chuyến xe.</h3></div>
+            <p data-i18n="busgo.adminSummary">Một không gian riêng cho bến xe: nắm bắt vận hành, quản lý lịch chạy, theo dõi doanh thu và hoa hồng. Chọn từng màn hình bên dưới để khám phá giao diện.</p>
+          </div>
+          <div class="busgo-tabs" role="tablist" aria-label="Màn hình quản trị BusGo" data-i18n-label="busgo.adminTabs" hidden>
+            <button type="button" id="busgo-tab-overview" role="tab" aria-controls="busgo-panel-overview" aria-selected="true" data-i18n="busgo.overviewTab">Tổng quan</button>
+            <button type="button" id="busgo-tab-schedules" role="tab" aria-controls="busgo-panel-schedules" aria-selected="false" tabindex="-1" data-i18n="busgo.schedulesTab">Lịch chạy</button>
+            <button type="button" id="busgo-tab-reports" role="tab" aria-controls="busgo-panel-reports" aria-selected="false" tabindex="-1" data-i18n="busgo.reportsTab">Doanh thu</button>
+          </div>
+          <figure class="busgo-screen busgo-admin-panel" id="busgo-panel-overview">
+            <div class="busgo-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ bảng tổng quan quản trị" data-i18n-label="busgo.adminScroll">
+              <a class="busgo-image-link" data-busgo-screen="admin" href="assets/busgo-admin-vi-dark.webp" aria-haspopup="dialog"><img src="assets/busgo-admin-vi-dark.webp" srcset="assets/busgo-admin-vi-dark-800.webp 800w, assets/busgo-admin-vi-dark.webp 1600w" sizes="90vw" width="1600" height="3173" loading="lazy" decoding="async" alt="Toàn bộ trang tổng quan quản trị BusGo: thanh điều hướng, công việc nhanh, chuyến sắp khởi hành và tài chính" data-i18n-alt="busgo.adminAlt"><span class="busgo-expand" data-i18n="busgo.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="busgo-screen-title" data-i18n="busgo.adminCaption">Tổng quan vận hành · Giao diện quản trị</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+          <figure class="busgo-screen busgo-admin-panel" id="busgo-panel-schedules">
+            <div class="busgo-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ trang quản lý lịch chạy" data-i18n-label="busgo.schedulesScroll">
+              <a class="busgo-image-link" data-busgo-screen="schedules" href="assets/busgo-schedules-vi-dark.webp" aria-haspopup="dialog"><img src="assets/busgo-schedules-vi-dark.webp" srcset="assets/busgo-schedules-vi-dark-800.webp 800w, assets/busgo-schedules-vi-dark.webp 1600w" sizes="90vw" width="1600" height="3840" loading="lazy" decoding="async" alt="Trang quản trị lịch chạy BusGo với bộ lọc và danh sách chuyến xe" data-i18n-alt="busgo.schedulesAlt"><span class="busgo-expand" data-i18n="busgo.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="busgo-screen-title" data-i18n="busgo.schedulesCaption">Lịch chạy · Tổ chức các chuyến xe</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+          <figure class="busgo-screen busgo-admin-panel" id="busgo-panel-reports">
+            <div class="busgo-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ báo cáo doanh thu" data-i18n-label="busgo.reportsScroll">
+              <a class="busgo-image-link" data-busgo-screen="reports" href="assets/busgo-reports-vi-dark.webp" aria-haspopup="dialog"><img src="assets/busgo-reports-vi-dark.webp" srcset="assets/busgo-reports-vi-dark-800.webp 800w, assets/busgo-reports-vi-dark.webp 1600w" sizes="90vw" width="1600" height="2514" loading="lazy" decoding="async" alt="Trang báo cáo doanh thu và hoa hồng BusGo với bộ lọc thời gian và bảng đối soát" data-i18n-alt="busgo.reportsAlt"><span class="busgo-expand" data-i18n="busgo.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="busgo-screen-title" data-i18n="busgo.reportsCaption">Doanh thu & hoa hồng · Theo dõi và đối soát</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+        </section>
+
+        <section class="busgo-booking" aria-labelledby="busgo-booking-title">
+          <div class="busgo-booking-copy">
+            <p class="project-kicker" data-i18n="busgo.bookingKicker">02 / TRẢI NGHIỆM ĐẶT VÉ</p>
+            <h3 id="busgo-booking-title" data-i18n="busgo.bookingTitle">Chỗ ngồi của bạn.<br>Lựa chọn của bạn.</h3>
+            <p data-i18n="busgo.bookingSummary">Từ tìm chuyến đến chọn nhiều ghế, điền thông tin hành khách và kiểm tra đặt vé. Mỗi bước được thể hiện rõ ngay trên giao diện.</p>
+            <ul class="busgo-capabilities"><li data-i18n="busgo.seats">Chọn nhiều ghế trong cùng lượt đặt</li><li data-i18n="busgo.review">Kiểm tra thông tin trước khi xác nhận</li><li data-i18n="busgo.preferences">Giao diện VI/EN, sáng/tối</li></ul>
+          </div>
+          <figure class="busgo-screen">
+            <div class="busgo-screen-scroll" tabindex="0" role="region" aria-label="Cuộn xem toàn bộ màn hình chọn ghế" data-i18n-label="busgo.bookingScroll">
+              <a class="busgo-image-link" data-busgo-screen="booking" href="assets/busgo-booking-vi-dark.webp" aria-haspopup="dialog"><img src="assets/busgo-booking-vi-dark.webp" srcset="assets/busgo-booking-vi-dark-800.webp 800w, assets/busgo-booking-vi-dark.webp 1600w" sizes="(max-width: 800px) 90vw, 60vw" width="1600" height="2742" loading="lazy" decoding="async" alt="Toàn bộ màn hình đặt vé BusGo với một ghế đã chọn và biểu mẫu hành khách" data-i18n-alt="busgo.bookingAlt"><span class="busgo-expand" data-i18n="busgo.expand">Xem ảnh đầy đủ <span aria-hidden="true">↗</span></span></a>
+            </div>
+            <figcaption><span class="busgo-screen-title" data-i18n="busgo.bookingCaption">Chọn ghế & thông tin hành khách</span><span data-i18n="busgo.scrollHint">Cuộn trong ảnh để xem tiếp · Bấm để phóng to</span></figcaption>
+          </figure>
+        </section>
+        <p class="busgo-demo-note" data-i18n="busgo.note">Ảnh chụp từ bản demo phục vụ học tập; số liệu trong giao diện không phải kết quả kinh doanh thực tế.</p>
+      </article>
+    </section>
+
     <section class="about section" id="about" aria-labelledby="about-title">
-      <div class="section-index"><span>01 — VỀ MÌNH</span><span>THE PERSON BEHIND THE PERSPECTIVE</span></div>
-      <div class="about-grid"><div><h2 id="about-title">Hai thế giới.<br>Một <em>góc nhìn.</em></h2><div class="signature">Thuận Phan <span>/ Peter</span></div></div><div class="about-copy"><p class="lead">Mình tin rằng một bức ảnh đẹp và một ý tưởng công nghệ tốt đều bắt đầu từ sự quan sát.</p><p>Là thợ ảnh bán chuyên, mình tìm thấy cảm hứng trong ánh sáng, bố cục và những khoảnh khắc đời thường. Là sinh viên năm 2 ngành Công nghệ thông tin quốc tế, mình đang học cách biến sự tò mò thành những điều có thể tạo ra.</p><p>Portfolio này là nơi hai hành trình ấy gặp nhau — một không gian để lưu giữ góc nhìn, chia sẻ trải nghiệm và kết nối với những ý tưởng mới.</p><div class="about-facts"><div><span>01 / SÁNG TẠO</span><strong>Nhiếp ảnh bán chuyên</strong></div><div><span>02 / HỌC TẬP</span><strong>CNTT quốc tế · Năm 2</strong></div></div></div></div>
-    </section>
-    <section class="work section" id="work" aria-labelledby="work-title">
-      <div class="section-index"><span>02 — GÓC NHÌN</span><span>A VISUAL EXPLORATION</span></div>
-      <div class="section-heading"><h2 id="work-title">Thế giới qua<br><em>những khung hình.</em></h2><p>Ánh sáng. Không gian. Cảm xúc.<br>Mỗi khung hình, một cách kể chuyện.</p></div>
-      <div class="gallery-toolbar"><div class="filters" role="group" aria-label="Lọc ảnh theo thể loại"><button class="filter active" data-filter="all" aria-pressed="true">Tất cả <sup>04</sup></button><button class="filter" data-filter="architecture" aria-pressed="false">Kiến trúc</button><button class="filter" data-filter="nature" aria-pressed="false">Thiên nhiên</button><button class="filter" data-filter="street" aria-pressed="false">Đời thường</button></div><span class="gallery-count" aria-live="polite">04 KHUNG HÌNH</span></div>
-      <div class="gallery">
-        <button class="photo-card photo-card-tall" data-category="architecture" data-title="Khoảng lặng của hình khối" data-type="KIẾN TRÚC" data-image="assets/architecture.jpg"><div class="photo-wrap"><img src="assets/architecture.jpg" alt="Ảnh minh họa đường cong kiến trúc tối giản" loading="lazy" width="1200" height="1600"><span class="photo-number">01</span><span class="photo-open" aria-hidden="true">↗</span><span class="sample-label">ẢNH MINH HỌA</span></div><div class="photo-meta"><h3>Khoảng lặng của hình khối</h3><span>KIẾN TRÚC / 01</span></div></button>
-        <button class="photo-card" data-category="nature" data-title="Phía bên kia đường chân trời" data-type="THIÊN NHIÊN" data-image="assets/landscape.jpg"><div class="photo-wrap"><img src="assets/landscape.jpg" alt="Ảnh minh họa phong cảnh núi non trong màn sương" loading="lazy" width="1200" height="800"><span class="photo-number">02</span><span class="photo-open" aria-hidden="true">↗</span><span class="sample-label">ẢNH MINH HỌA</span></div><div class="photo-meta"><h3>Phía bên kia đường chân trời</h3><span>THIÊN NHIÊN / 02</span></div></button>
-        <button class="photo-card" data-category="street" data-title="Nhịp sống, một khoảnh khắc" data-type="ĐỜI THƯỜNG" data-image="assets/street.jpg"><div class="photo-wrap"><img src="assets/street.jpg" alt="Ảnh minh họa con phố giữa những tòa nhà thành thị" loading="lazy" width="1200" height="800"><span class="photo-number">03</span><span class="photo-open" aria-hidden="true">↗</span><span class="sample-label">ẢNH MINH HỌA</span></div><div class="photo-meta"><h3>Nhịp sống, một khoảnh khắc</h3><span>ĐỜI THƯỜNG / 03</span></div></button>
-        <button class="photo-card photo-card-tall" data-category="nature" data-title="Nơi ánh sáng chạm vào" data-type="THIÊN NHIÊN" data-image="assets/forest.jpg"><div class="photo-wrap"><img src="assets/forest.jpg" alt="Ảnh minh họa ánh sáng xuyên qua rừng cây" loading="lazy" width="1200" height="1600"><span class="photo-number">04</span><span class="photo-open" aria-hidden="true">↗</span><span class="sample-label">ẢNH MINH HỌA</span></div><div class="photo-meta"><h3>Nơi ánh sáng chạm vào</h3><span>THIÊN NHIÊN / 04</span></div></button>
+      <div class="section-index"><span data-i18n="about.index">02 — VỀ MÌNH</span><span data-i18n="about.context">CON NGƯỜI PHÍA SAU GÓC NHÌN</span></div>
+      <div class="about-grid">
+        <div class="about-portrait-col">
+          <div class="portrait-card">
+            <div class="portrait-frame">
+              <img src="assets/personal_1-960.webp" srcset="assets/personal_1-480.webp 480w, assets/personal_1-960.webp 960w, assets/personal_1-1600.webp 1201w" sizes="(max-width: 1050px) 88vw, 40vw" alt="Chân dung Thuận Phan giữa hàng cây" data-i18n-alt="photo.portrait.alt" loading="lazy" decoding="async" width="1201" height="1800">
+              <span class="visual-corner top-left" aria-hidden="true"></span><span class="visual-corner bottom-right" aria-hidden="true"></span>
+            </div>
+            <div class="portrait-meta"><span class="portrait-name" data-i18n="name">THUẬN PHAN</span><span class="portrait-role" data-i18n="about.portraitRole">BrSE · GAME DEV · TECH FOUNDER</span></div>
+          </div>
+          <div class="signature" data-i18n="about.signature">Thuận Phan <span>/ Peter</span></div>
+        </div>
+        <div class="about-copy">
+          <h2 id="about-title" data-i18n="about.title">Hai thế giới.<br>Một <em>góc nhìn.</em></h2>
+          <p class="lead" data-i18n="about.lead">Một bức ảnh và một giải pháp công nghệ đều bắt đầu từ việc quan sát kỹ điều đang ở trước mắt.</p>
+          <p data-i18n="about.education">Mình học chương trình Cử nhân Công nghệ thông tin Quốc tế tại ICTU — Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên. Năm 2026, mình tham gia chương trình mobility ba tháng ngành CNTT tại INTI International University, Malaysia.</p>
+          <p data-i18n="about.practice">Lập trình giúp mình rèn cách giải quyết vấn đề; phần cứng dạy mình làm việc với những tình huống thực tế. Nhiếp ảnh bổ sung một cách quan sát khác — chú ý tới ánh sáng, bố cục và câu chuyện của từng khung hình.</p>
+          <div class="about-facts">
+            <div><span data-i18n="about.studyLabel">HIỆN TẠI</span><strong data-i18n="about.study">Sinh viên năm 2 · CNTT Quốc tế</strong><small data-i18n="about.school">ICTU · Mobility tại INTI Malaysia, 2026</small></div>
+            <div><span data-i18n="about.directionLabel">HƯỚNG PHÁT TRIỂN</span><strong>Software Engineering</strong><small>Bridge System Engineering</small></div>
+            <div><span data-i18n="about.birthLabel">NGÀY SINH</span><strong>28 / 07 / 2007</strong><small data-i18n="about.birth">28 tháng 7, 2007</small></div>
+            <div><span data-i18n="about.genderLabel">GIỚI TÍNH</span><strong data-i18n="about.gender">Nam</strong><small data-i18n="about.genderNote">Nam</small></div>
+            <div><span data-i18n="about.originLabel">QUÊ QUÁN</span><strong data-i18n="about.origin">Nam Định — Ninh Bình</strong><small data-i18n="about.country">Việt Nam</small></div>
+            <div><span data-i18n="about.phoneLabel">ĐIỆN THOẠI</span><a class="about-phone" href="tel:+84916426992"><strong>+84.916.426.992</strong></a><small data-i18n="about.phoneNote">Hotline / Zalo liên hệ</small></div>
+          </div>
+          <div class="gear-stack-section">
+            <div class="gear-card">
+              <div class="gear-header"><span class="gear-title" data-i18n="about.expBrse">KỸ THUẬT PHẦN MỀM & KỸ SƯ CẦU NỐI</span></div>
+              <div class="tags"><span>Bridge SE (BrSE)</span><span>C# / .NET</span><span>ASP.NET Core</span><span>C++</span><span>SQL Server</span><span data-i18n="skill.algorithms">Tư duy thuật toán</span><span data-i18n="skill.english">Tiếng Anh & Giao tiếp kỹ thuật</span></div>
+            </div>
+            <div class="gear-card">
+              <div class="gear-header"><span class="gear-title" data-i18n="about.expGame">PHÁT TRIỂN GAME & ĐỒ HỌA</span></div>
+              <div class="tags"><span>Game Architecture</span><span>C++</span><span>C#</span><span>Tư duy OOP</span><span data-i18n="skill.visualStory">Kể chuyện thị giác</span><span>Lightroom Classic</span><span>Nikon D7000 / D5100</span></div>
+            </div>
+            <div class="gear-card">
+              <div class="gear-header"><span class="gear-title" data-i18n="about.expHardware">PHẦN CỨNG & VẬN HÀNH THỰC TẾ</span></div>
+              <div class="tags"><span>Founder & CEO TechSupport</span><span>Mô hình S2S</span><span data-i18n="skill.pcBuild">Lắp ráp & Cấu hình PC</span><span data-i18n="skill.troubleshooting">Xử lý sự cố phần cứng</span><span>Tối ưu hệ điều hành</span><span data-i18n="skill.leadership">Điều phối đội ngũ</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="gallery-note"><span aria-hidden="true">ⓘ</span> Bộ ảnh minh họa cho giao diện, nguồn Unsplash. Ảnh cá nhân của Thuận sẽ được cập nhật tại đây.</p>
     </section>
+
+    <section class="work section" id="work" aria-labelledby="work-title">
+      <div class="section-index"><span data-i18n="photos.index">03 — NHIẾP ẢNH & KỶ NIỆM</span><span data-i18n="photos.context">NHỮNG GÓC NHÌN ĐƯỢC LƯU LẠI</span></div>
+      <div class="section-heading"><h2 id="work-title" data-i18n="photos.title">Thế giới qua<br><em>những khung hình.</em></h2><p data-i18n="photos.intro">Ảnh do mình chụp, chân dung cá nhân<br>và ký ức từ hành trình tại INTI.</p></div>
+      <div class="gallery-toolbar">
+        <div class="filters" role="group" aria-label="Lọc ảnh theo thể loại" data-i18n-label="photos.filterLabel">
+          <button class="filter active" data-filter="all" aria-pressed="true"><span class="filter-label" data-i18n="photos.all">Tất cả</span> <sup>6</sup></button>
+          <button class="filter" data-filter="photo" aria-pressed="false"><span class="filter-label" data-i18n="photos.artwork">Ảnh mình chụp</span> <sup>2</sup></button>
+          <button class="filter" data-filter="portrait" aria-pressed="false"><span class="filter-label" data-i18n="photos.portraits">Chân dung</span> <sup>2</sup></button>
+          <button class="filter" data-filter="life" aria-pressed="false"><span class="filter-label" data-i18n="photos.life">Kỷ niệm INTI</span> <sup>2</sup></button>
+        </div>
+        <span class="gallery-count" aria-live="polite">06 KHUNG HÌNH</span>
+      </div>
+      <div class="gallery">
+        <button class="photo-card" data-photo="night" data-category="photo" data-title="Tĩnh lặng dưới ánh đèn" data-type="ẢNH MÌNH CHỤP" data-camera="Nikon D5100 · 1/160 s · ISO 250" data-image="assets/photo_2-1600.webp" data-caption="Ảnh: Thuận Phan (Peter Phan)." data-i18n-caption="photo.credit">
+          <div class="photo-wrap"><img src="assets/photo_2-960.webp" srcset="assets/photo_2-480.webp 480w, assets/photo_2-960.webp 960w, assets/photo_2-1600.webp 1600w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Một khoảnh khắc dưới ánh đèn qua góc nhìn của Thuận Phan" data-i18n-alt="photo.night.alt" loading="lazy" decoding="async" width="3264" height="4928"><span class="photo-number">01</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photo.artwork">ẢNH DO MÌNH CHỤP</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.night.title">Tĩnh lặng dưới ánh đèn</h3><span>ẢNH MÌNH CHỤP / 01</span></div>
+        </button>
+        <button class="photo-card" data-photo="portrait" data-category="portrait" data-title="Giữa những hàng cây" data-type="CHÂN DUNG" data-image="assets/personal_1-1600.webp" data-caption="Chân dung Thuận Phan · Tư liệu cá nhân." data-i18n-caption="photo.portrait.credit">
+          <div class="photo-wrap"><img src="assets/personal_1-960.webp" srcset="assets/personal_1-480.webp 480w, assets/personal_1-960.webp 960w, assets/personal_1-1600.webp 1201w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Chân dung Thuận Phan giữa hàng cây" data-i18n-alt="photo.portrait.alt" loading="lazy" decoding="async" width="1201" height="1800"><span class="photo-number">02</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photos.portraits">Chân dung</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.portrait.title">Giữa những hàng cây</h3><span>CHÂN DUNG / 02</span></div>
+        </button>
+        <button class="photo-card" data-photo="friends" data-category="life" data-title="Những người bạn tại INTI" data-type="KỶ NIỆM INTI" data-image="assets/inti_friends-1600.webp" data-caption="Kỷ niệm tại INTI Malaysia · Tư liệu cá nhân." data-i18n-caption="photo.life.credit">
+          <div class="photo-wrap"><img src="assets/inti_friends-960.webp" srcset="assets/inti_friends-480.webp 480w, assets/inti_friends-960.webp 960w, assets/inti_friends-1600.webp 1442w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Nhóm bạn trong một buổi gặp gỡ tại INTI" data-i18n-alt="photo.friends.alt" loading="lazy" decoding="async" width="1442" height="2560"><span class="photo-number">03</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photos.life">Kỷ niệm INTI</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.friends.title">Những người bạn tại INTI</h3><span>KỶ NIỆM INTI / 03</span></div>
+        </button>
+        <button class="photo-card" data-photo="moment" data-category="photo" data-title="Khoảnh khắc đời thường" data-type="ẢNH MÌNH CHỤP" data-image="assets/photo_1-960.webp" data-caption="Ảnh: Thuận Phan (Peter Phan)." data-i18n-caption="photo.credit">
+          <div class="photo-wrap"><img src="assets/photo_1-960.webp" srcset="assets/photo_1-480.webp 480w, assets/photo_1-960.webp 960w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Một chân dung bên khung cửa và ánh sáng tự nhiên" data-i18n-alt="photo.moment.alt" loading="lazy" decoding="async" width="960" height="957"><span class="photo-number">04</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photo.artwork">ẢNH DO MÌNH CHỤP</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.moment.title">Khoảnh khắc đời thường</h3><span>ẢNH MÌNH CHỤP / 04</span></div>
+        </button>
+        <button class="photo-card" data-photo="natural" data-category="portrait" data-title="Một khoảng nghỉ" data-type="CHÂN DUNG" data-image="assets/personal_2-1600.webp" data-caption="Chân dung Thuận Phan · Tư liệu cá nhân." data-i18n-caption="photo.portrait.credit">
+          <div class="photo-wrap"><img src="assets/personal_2-960.webp" srcset="assets/personal_2-480.webp 480w, assets/personal_2-960.webp 960w, assets/personal_2-1600.webp 1600w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Thuận Phan trong một khoảnh khắc ngoài trời" data-i18n-alt="photo.natural.alt" loading="lazy" decoding="async" width="1706" height="2560"><span class="photo-number">05</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photos.portraits">Chân dung</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.natural.title">Một khoảng nghỉ</h3><span>CHÂN DUNG / 05</span></div>
+        </button>
+        <button class="photo-card" data-photo="campus" data-category="life" data-title="Một chương tại Malaysia" data-type="KỶ NIỆM INTI" data-image="assets/inti_1-1600.webp" data-caption="Kỷ niệm tại INTI Malaysia · Tư liệu cá nhân." data-i18n-caption="photo.life.credit">
+          <div class="photo-wrap"><img src="assets/inti_1-960.webp" srcset="assets/inti_1-480.webp 480w, assets/inti_1-960.webp 960w, assets/inti_1-1600.webp 1444w" sizes="(max-width: 550px) 90vw, (min-width: 1500px) 650px, 44vw" alt="Không gian khuôn viên INTI International University" data-i18n-alt="photo.campus.alt" loading="lazy" decoding="async" width="1444" height="2568"><span class="photo-number">06</span><span class="photo-open" aria-hidden="true">↗</span><span class="badge-tag" data-i18n="photos.life">Kỷ niệm INTI</span></div>
+          <div class="photo-meta"><h3 data-i18n="photo.campus.title">Một chương tại Malaysia</h3><span>KỶ NIỆM INTI / 06</span></div>
+        </button>
+      </div>
+      <p class="gallery-note" data-i18n="photos.note">Mục “Ảnh mình chụp” là tác phẩm của Thuận Phan. Chân dung và kỷ niệm INTI thuộc tư liệu cá nhân; thông tin riêng được ghi trong từng ảnh.</p>
+    </section>
+
     <section class="journey section" id="journey" aria-labelledby="journey-title">
-      <div class="section-index"><span>03 — HÀNH TRÌNH</span><span>ART MEETS LOGIC</span></div>
-      <div class="journey-grid"><div class="journey-intro"><h2 id="journey-title">Luôn tò mò.<br>Luôn <em>tiến về trước.</em></h2><p>Hai hướng khám phá, cùng một tinh thần:<br>quan sát kỹ hơn, học hỏi nhiều hơn.</p><div class="aperture" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div><span>ART <i>×</i> TECH</span><small>THE INTERSECTION</small><b>+</b></div></div><div class="journey-list"><article><span class="journey-number">01</span><div><div class="journey-tag">THROUGH THE LENS</div><h3>Nhiếp ảnh</h3><p>Một cách quan sát và kể chuyện. Khám phá ánh sáng, bố cục và cảm xúc qua góc nhìn của một người chụp ảnh bán chuyên.</p><div class="tags"><span>Ánh sáng</span><span>Bố cục</span><span>Câu chuyện</span></div></div><span class="journey-icon" aria-hidden="true">↗</span></article><article><span class="journey-number">02</span><div><div class="journey-tag">BEHIND THE SCREEN</div><h3>Công nghệ thông tin</h3><p>Sinh viên năm 2 ngành Công nghệ thông tin quốc tế. Từng bước xây dựng nền tảng, rèn luyện tư duy logic và tìm hiểu những khả năng của công nghệ.</p><div class="tags"><span>Học hỏi</span><span>Tư duy logic</span><span>Khám phá</span></div></div><span class="journey-icon" aria-hidden="true">↗</span></article><article><span class="journey-number">03</span><div><div class="journey-tag">WHAT COMES NEXT</div><h3>Điểm giao thoa</h3><p>Mình muốn kết nối cảm quan thẩm mỹ với tư duy công nghệ, để mỗi ý tưởng vừa có chiều sâu thị giác, vừa mang lại trải nghiệm có ý nghĩa.</p></div><span class="journey-icon" aria-hidden="true">↗</span></article></div></div>
+      <div class="section-index"><span data-i18n="journey.index">04 — HÀNH TRÌNH</span><span>THE STORY SO FAR</span></div>
+      <div class="journey-header"><div class="journey-header-content">
+        <div class="eyebrow" data-i18n="journey.eyebrow">TỪ NĂM 4 TUỔI ĐẾN HIỆN TẠI</div>
+        <h2 id="journey-title" data-i18n="journey.title">Hành trình<br><em>đến hôm nay.</em></h2>
+        <p class="journey-lead" data-i18n="journey.lead">Từ lần đầu khám phá máy tính đến những cuộc thi, công việc kỹ thuật, nhiếp ảnh và một dự án dành cho sinh viên. Mỗi chặng đường mở ra một cách nhìn mới.</p>
+      </div></div>
+      <nav class="journey-nav" aria-label="Các chặng trong hành trình" data-i18n-label="journey.navLabel"><a href="#chapter-1" data-i18n="journey.act1">01 / Khởi đầu & rèn luyện</a><a href="#chapter-6" data-i18n="journey.act2">02 / Mở rộng góc nhìn</a><a href="#chapter-8" data-i18n="journey.act3">03 / Xây dựng & kết nối</a></nav>
+      <div class="timeline" id="journey-timeline">
+        <div class="timeline-track" aria-hidden="true"><div class="timeline-track-progress"></div></div>
+        <div class="timeline-items">
+          <article class="timeline-item" data-chapter="1" id="chapter-1" aria-labelledby="chapter-title-1">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">01</span><span class="timeline-stage" data-i18n="journey.first.stage">4 TUỔI</span></div>
+              <h3 class="timeline-title" id="chapter-title-1" data-i18n="journey.first.title">Cú chạm đầu tiên</h3>
+              <p class="timeline-story" data-i18n="journey.first.story">Mình chạm vào chiếc máy tính đầu tiên lúc bốn tuổi. Chưa hiểu nó hoạt động ra sao, nhưng sự tò mò từ khoảnh khắc ấy đã theo mình đến tận hôm nay.</p>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="2" id="chapter-2" aria-labelledby="chapter-title-2">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">02</span><span class="timeline-stage" data-i18n="journey.code.stage">LỚP 7</span></div>
+              <h3 class="timeline-title" id="chapter-title-2" data-i18n="journey.code.title">Bắt đầu lập trình</h3>
+              <p class="timeline-story" data-i18n="journey.code.story">Pascal là ngôn ngữ đầu tiên mình học, rồi đến C++. Lập trình dần vượt khỏi một môn học: mình muốn hiểu vì sao một lời giải đúng và làm thế nào để viết nó tốt hơn.</p>
+              <div class="timeline-tags"><span>Pascal</span><span>C++</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="3" id="chapter-3" aria-labelledby="chapter-title-3">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">03</span><span class="timeline-stage" data-i18n="journey.recognition.stage">LỚP 8</span></div>
+              <div class="timeline-badge" data-i18n="journey.recognition.badge">Giải Khuyến khích — HSG Tin học cấp thành phố</div>
+              <h3 class="timeline-title" id="chapter-title-3" data-i18n="journey.recognition.title">Sự ghi nhận đầu tiên</h3>
+              <p class="timeline-story" data-i18n="journey.recognition.story">Giải thưởng đầu tiên đến sau quá trình luyện tập lập trình và giải quyết vấn đề. Đó là động lực để mình tiếp tục theo đuổi Tin học thi đấu nghiêm túc hơn.</p>
+            </div>
+          </article>
+          <article class="timeline-item timeline-highlight" data-chapter="4" id="chapter-4" aria-labelledby="chapter-title-4">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card">
+              <div class="timeline-award">
+                <span class="award-number" aria-hidden="true">01</span>
+                <strong data-i18n="journey.prize.award">Giải Nhất</strong>
+                <span data-i18n="journey.prize.competition">Kỳ thi Học sinh giỏi Tin học cấp tỉnh</span>
+              </div>
+              <div class="timeline-feature-copy">
+                <div class="card-top"><span class="timeline-chapter">04</span><span class="timeline-stage" data-i18n="journey.prize.stage">LỚP 9</span></div>
+                <h3 class="timeline-title" id="chapter-title-4" data-i18n="journey.prize.title">Một bước tiến lớn</h3>
+                <p class="timeline-story" data-i18n="journey.prize.story">Một năm sau giải thưởng đầu tiên, mình đạt Giải Nhất kỳ thi Học sinh giỏi Tin học cấp tỉnh. Đây là một trong những cột mốc đáng nhớ nhất thời THCS, và là lý do để mình tiếp tục đầu tư vào nền tảng thuật toán.</p>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="5" id="chapter-5" aria-labelledby="chapter-title-5">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">05</span><span class="timeline-stage" data-i18n="journey.school.stage">THPT TRẦN VĂN LAN</span></div>
+              <div class="timeline-badge" data-i18n="journey.school.badge">Giải Khuyến khích — HSG Tin học THPT</div>
+              <h3 class="timeline-title" id="chapter-title-5" data-i18n="journey.school.title">Ba năm trong đội tuyển Tin học</h3>
+              <p class="timeline-story" data-i18n="journey.school.story">Mình được chọn bồi dưỡng Tin học trong ba năm liên tiếp tại THPT Trần Văn Lan. Những lời giải sai, bài toán khó và lần thử lại dạy mình cách kiên trì, tự học và nhìn vấn đề có hệ thống.</p>
+              <div class="timeline-tags"><span data-i18n="skill.persistence">Sự bền bỉ</span><span data-i18n="skill.algorithms">Tư duy thuật toán</span><span data-i18n="skill.problemSolving">Giải quyết vấn đề</span><span data-i18n="skill.selfLearning">Tự học</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="6" id="chapter-6" aria-labelledby="chapter-title-6">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">06</span><span class="timeline-stage" data-i18n="journey.hardware.stage">NHỮNG NĂM THPT</span></div>
+              <div class="timeline-badge" data-i18n="journey.hardware.badge">Kỹ thuật viên máy tính</div>
+              <h3 class="timeline-title" id="chapter-title-6" data-i18n="journey.hardware.title">Vượt ra ngoài dòng code</h3>
+              <p class="timeline-story" data-i18n="journey.hardware.story">Qua trải nghiệm thực tế tại các tiệm máy tính địa phương, mình học lắp ráp, sửa chữa và xử lý sự cố phần cứng. Việc chọn linh kiện, nâng cấp máy và tư vấn cấu hình giúp mình hiểu máy tính từ cả phần mềm lẫn phần cứng.</p>
+              <div class="timeline-tags"><span data-i18n="skill.pcBuild">Lắp ráp PC</span><span data-i18n="skill.troubleshooting">Xử lý sự cố</span><span data-i18n="skill.repair">Sửa chữa máy tính</span><span data-i18n="skill.os">Cài đặt hệ điều hành</span><span data-i18n="skill.upgrades">Nâng cấp & chọn linh kiện</span><span data-i18n="skill.consulting">Tư vấn cấu hình</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="7" id="chapter-7" aria-labelledby="chapter-title-7">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">07</span><span class="timeline-stage" data-i18n="journey.camera.stage">LỚP 12</span></div>
+              <div class="timeline-badge" data-i18n="journey.camera.badge">Nhiếp ảnh bán chuyên</div>
+              <h3 class="timeline-title" id="chapter-title-7" data-i18n="journey.camera.title">Rồi tiếng màn trập vang lên</h3>
+              <p class="timeline-story" data-i18n="journey.camera.story">Năm cuối cấp, mình bắt đầu tìm hiểu nhiếp ảnh. Từ cách vận hành máy và phơi sáng đến bố cục, ánh sáng và hậu kỳ, mình học cách kể một câu chuyện mà không cần dùng lời.</p>
+              <div class="timeline-tags"><span data-i18n="skill.camera">Vận hành máy ảnh</span><span data-i18n="skill.composition">Bố cục</span><span data-i18n="skill.light">Ánh sáng</span><span data-i18n="skill.visualStory">Kể chuyện thị giác</span><span data-i18n="skill.editing">Hậu kỳ</span></div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="8" id="chapter-8" aria-labelledby="chapter-title-8">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">08</span><span class="timeline-stage">2025 · ICTU</span></div>
+              <div class="timeline-badge" data-i18n="journey.university.badge">Chương trình Cử nhân Công nghệ thông tin Quốc tế</div>
+              <h3 class="timeline-title" id="chapter-title-8" data-i18n="journey.university.title">Bắt đầu một chương mới</h3>
+              <p class="timeline-story" data-i18n="journey.university.story">Mình tiếp tục hành trình công nghệ tại ICTU — Đại học Công nghệ thông tin và Truyền thông, Đại học Thái Nguyên. Bên cạnh kiến thức chuyên môn, đại học là môi trường để mình thực hành giao tiếp, thuyết trình, làm việc nhóm và quản lý dự án.</p>
+              <div class="timeline-tags"><span data-i18n="skill.communication">Giao tiếp & thuyết trình</span><span data-i18n="skill.teamwork">Làm việc nhóm</span><span data-i18n="skill.leadership">Lãnh đạo</span><span data-i18n="skill.management">Quản lý dự án</span></div>
+            </div>
+          </article>
+          <article class="timeline-item timeline-highlight" data-chapter="9" id="chapter-9" aria-labelledby="chapter-title-9">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card">
+              <figure class="timeline-feature-media timeline-project-media">
+                <img src="assets/ts-home-vi-800.webp" srcset="assets/ts-home-vi-800.webp 800w, assets/ts-home-vi.webp 1600w" sizes="(max-width: 700px) 85vw, 40vw" width="1600" height="766" loading="lazy" decoding="async" alt="Giao diện trang chủ TechSupport" data-i18n-alt="journey.founder.imageAlt" data-ts-timeline-img>
+                <figcaption><strong>S2S</strong><span>Student to Student</span></figcaption>
+              </figure>
+              <div class="timeline-feature-copy">
+                <div class="card-top"><span class="timeline-chapter">09</span><span class="timeline-stage" data-i18n="journey.founder.stage">THỜI ĐẠI HỌC</span></div>
+                <div class="timeline-badge timeline-badge-gold"><strong>TechSupport · Founder & CEO</strong></div>
+                <h3 class="timeline-title" id="chapter-title-9" data-i18n="journey.founder.title">Từ kỹ năng đến một dự án thật</h3>
+                <p class="timeline-story" data-i18n="journey.founder.story">Mình sáng lập TechSupport từ kinh nghiệm kỹ thuật đã tích lũy, với mô hình S2S — sinh viên hỗ trợ sinh viên. Dự án hiện đang hoạt động, kết hợp hỗ trợ công nghệ, phát triển dịch vụ và phối hợp đội ngũ.</p>
+                <a class="timeline-project-link" href="#techsupport" data-i18n="journey.founder.link">Tìm hiểu TechSupport <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item timeline-highlight" data-chapter="10" id="chapter-10" aria-labelledby="chapter-title-10">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card">
+              <figure class="timeline-feature-media timeline-mobility-media">
+                <img src="assets/inti_friends-960.webp" srcset="assets/inti_friends-480.webp 480w, assets/inti_friends-960.webp 960w" sizes="(max-width: 700px) 85vw, 40vw" width="1442" height="2560" loading="lazy" decoding="async" alt="Nhóm bạn cùng nhau tại INTI" data-i18n-alt="photo.friends.alt">
+                <figcaption data-i18n="photo.life.credit">Kỷ niệm tại INTI Malaysia · Tư liệu cá nhân.</figcaption>
+              </figure>
+              <div class="timeline-feature-copy">
+                <div class="card-top"><span class="timeline-chapter">10</span><span class="timeline-stage">2026 · MALAYSIA</span></div>
+                <div class="timeline-badge timeline-badge-gold"><strong>INTI International University</strong><small data-i18n="journey.mobility.badge">Mobility Student · 3 tháng · CNTT</small></div>
+                <h3 class="timeline-title" id="chapter-title-10" data-i18n="journey.mobility.title">Bước ra môi trường quốc tế</h3>
+                <p class="timeline-story" data-i18n="journey.mobility.story">Ba tháng học CNTT tại INTI Malaysia đưa mình vào một môi trường học tập và văn hóa mới. Trải nghiệm này giúp mình tự lập hơn, thích ứng tốt hơn và rèn giao tiếp tiếng Anh trong cuộc sống lẫn học tập.</p>
+                <div class="timeline-tags"><span data-i18n="skill.independence">Tự lập</span><span data-i18n="skill.adaptability">Thích ứng</span><span data-i18n="skill.english">Giao tiếp tiếng Anh</span><span data-i18n="skill.crossCulture">Giao tiếp đa văn hóa</span><span data-i18n="skill.global">Tư duy quốc tế</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="timeline-item" data-chapter="11" id="chapter-11" aria-labelledby="chapter-title-11">
+            <div class="timeline-node" aria-hidden="true"><span class="node-ring"></span><span class="node-dot"></span></div>
+            <div class="timeline-card"><div class="card-top"><span class="timeline-chapter">11</span><span class="timeline-stage" data-i18n="journey.today.stage">HIỆN TẠI</span></div>
+              <div class="timeline-badge" data-i18n="journey.today.badge">Sinh viên năm 2 CNTT Quốc tế · ICTU</div>
+              <h3 class="timeline-title" id="chapter-title-11" data-i18n="journey.today.title">Vẫn đang xây dựng</h3>
+              <p class="timeline-story" data-i18n="journey.today.story">Mình tiếp tục học, xây dựng dự án và rèn kỹ năng giao tiếp, lãnh đạo. Software Engineering và Bridge System Engineering là hướng phát triển chính; Product Development và Game Development là những lĩnh vực mình tiếp tục khám phá.</p>
+            </div>
+          </article>
+        </div>
+        <div class="timeline-closing"><span class="closing-tag" data-i18n="journey.closingTag">CÂU CHUYỆN VẪN TIẾP TỤC</span><blockquote class="closing-quote" data-i18n="journey.quote">“Những cột mốc phía sau không phải đích đến. Chúng mới chỉ là những chương đầu của một hành trình dài hơn.”</blockquote></div>
+      </div>
     </section>
-    <section class="contact section" id="contact" aria-labelledby="contact-title"><div class="section-index"><span>04 — KẾT NỐI</span><span>GOOD THINGS START WITH A HELLO</span></div><div class="contact-top"><div class="eyebrow"><span class="tiny-cross">+</span> LET'S CREATE SOMETHING MEANINGFUL</div><h2 id="contact-title">Một ý tưởng hay<br>bắt đầu bằng <em>lời chào.</em></h2><p>Trao đổi về nhiếp ảnh, công nghệ hay một dự án thú vị?<br>Mình luôn sẵn lòng lắng nghe.</p></div><div class="contact-bottom"><a class="email-link" href="mailto:phanducthuan287@gmail.com">phanducthuan287@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-email" aria-label="Sao chép địa chỉ email"><span class="copy-icon" aria-hidden="true">▣</span> Sao chép email</button></div></section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="section-index"><span data-i18n="contact.index">05 — KẾT NỐI</span><span data-i18n="contact.context">BẮT ĐẦU BẰNG MỘT CUỘC TRÒ CHUYỆN</span></div>
+      <div class="contact-top"><h2 id="contact-title" data-i18n="contact.title">Một ý tưởng hay<br>bắt đầu bằng <em>lời chào.</em></h2><p data-i18n="contact.description">Trao đổi về cơ hội học tập và làm việc trong ngành phần mềm, cộng tác cùng TechSupport hoặc một dự án nhiếp ảnh?<br>Hãy cho mình biết bạn đang nghĩ đến điều gì.</p></div>
+      <div class="contact-bottom">
+        <div class="contact-info">
+          <a class="email-link" href="mailto:phanducthuan287@gmail.com">phanducthuan287@gmail.com <span aria-hidden="true">↗</span></a>
+          <a class="phone-link" href="tel:+84916426992">+84.916.426.992 <span aria-hidden="true">↗</span></a>
+          <span class="contact-status" data-i18n="contact.status"><span class="status-pulse" aria-hidden="true"></span> Sẵn sàng trao đổi về dự án & cộng tác</span>
+        </div>
+        <div class="contact-actions">
+          <button class="copy-email" aria-label="Sao chép địa chỉ email" data-i18n-label="contact.copyLabel" data-i18n="contact.copy">Sao chép email</button>
+          <button class="copy-phone" aria-label="Sao chép số điện thoại" data-i18n-label="contact.copyPhoneLabel" data-i18n="contact.copyPhone">Sao chép SĐT</button>
+          <a class="button button-outline" href="https://github.com/Tphand2877" target="_blank" rel="noopener noreferrer" aria-label="Xem hồ sơ GitHub của Tphand2877 (tab mới)" data-i18n-label="contact.githubLabel">GitHub / Tphand2877 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><a class="footer-name" href="#home">THUẬN PHAN<span>NHIẾP ẢNH & CÔNG NGHỆ</span></a><span>© <span id="year">2026</span> <span class="copyright-name">Thuận Phan.</span></span><a href="#home">VỀ ĐẦU TRANG <span aria-hidden="true">↑</span></a></footer>
-  <dialog class="lightbox" aria-labelledby="lightbox-title"><div class="lightbox-toolbar"><span id="lightbox-category"></span><button class="lightbox-close" aria-label="Đóng ảnh">ĐÓNG <span aria-hidden="true">×</span></button></div><div class="lightbox-image-wrap"><button class="lightbox-prev" aria-label="Ảnh trước">←</button><img id="lightbox-image" src="assets/architecture.jpg" alt=""><button class="lightbox-next" aria-label="Ảnh tiếp theo">→</button></div><div class="lightbox-bottom"><h2 id="lightbox-title"></h2><p>Ảnh minh họa từ Unsplash · Không phải tác phẩm của Thuận Phan.</p><span id="lightbox-index"></span></div></dialog>
+
+  <footer class="footer"><a class="footer-name" href="#home" data-i18n="footer.brand">THUẬN PHAN<span>LẬP TRÌNH - CÔNG NGHỆ - NHIẾP ẢNH</span></a><span>© <span id="year">2026</span> <span data-i18n="footer.copyright">Thuận Phan. Bảo lưu mọi quyền.</span></span><a class="back-to-top" href="#home" data-i18n="nav.top">Về đầu trang <span aria-hidden="true">↑</span></a></footer>
+  <a class="page-top" href="#home" aria-label="Về đầu trang" data-i18n-label="nav.topLabel" hidden><span aria-hidden="true">↑</span></a>
+
+  <dialog class="project-viewer" aria-labelledby="project-viewer-title" aria-describedby="project-viewer-hint">
+    <div class="project-viewer-toolbar">
+      <h2 id="project-viewer-title"></h2>
+      <div class="project-viewer-actions">
+        <button type="button" class="project-viewer-zoom" aria-pressed="false" data-i18n="busgo.zoom">Phóng to</button>
+        <button type="button" class="project-viewer-close" autofocus data-i18n="photos.close">Đóng <span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+    <p id="project-viewer-hint" data-i18n="busgo.viewerHint">Ảnh đầy đủ · Cuộn để xem tiếp. Bật phóng to để đọc chi tiết.</p>
+    <div class="project-viewer-scroll" tabindex="0" role="region" aria-label="Ảnh giao diện BusGo đầy đủ" data-i18n-label="busgo.viewerScroll"><img id="project-viewer-image" alt=""></div>
+  </dialog>
+
+  <dialog class="lightbox" aria-labelledby="lightbox-title" aria-describedby="lightbox-desc">
+    <div class="lightbox-toolbar"><div class="lightbox-header-meta"><span id="lightbox-category"></span><span id="lightbox-camera" class="lightbox-camera-tag" hidden></span></div><button class="lightbox-close" aria-label="Đóng ảnh" data-i18n-label="photos.closeLabel" data-i18n="photos.close">Đóng <span aria-hidden="true">×</span></button></div>
+    <div class="lightbox-image-wrap"><button class="lightbox-prev" aria-label="Ảnh trước" data-i18n-label="photos.previous">←</button><img id="lightbox-image" alt=""><button class="lightbox-next" aria-label="Ảnh tiếp theo" data-i18n-label="photos.next">→</button></div>
+    <div class="lightbox-bottom"><h2 id="lightbox-title"></h2><p id="lightbox-desc"></p><span id="lightbox-index" aria-live="polite"></span></div>
+  </dialog>
   <div class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
