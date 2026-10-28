@@ -675,6 +675,57 @@ html[lang="en"] .lang-slider,
   align-items: center;
 }
 
+.hero-portrait {
+  width: 100%;
+  max-width: 490px;
+}
+
+.hero-social {
+  width: 100%;
+  max-width: 490px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-gold);
+}
+
+.hero-social-title {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hero-social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius-sm);
+  background: var(--glass-bg);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.24s ease, border-color 0.24s ease, background-color 0.24s ease;
+}
+
+.hero-social-links a:hover {
+  color: var(--gold-bright);
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
 @keyframes ambient-breathing {
   0%, 100% {
     box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5), 0 0 35px var(--gold-glow);
@@ -2893,7 +2944,7 @@ h2 em {
   .hero-visual {
     align-items: flex-start;
   }
-  .hero-image-wrap, .hero-portrait-caption {
+  .hero-portrait, .hero-social, .hero-image-wrap, .hero-portrait-caption {
     max-width: 620px;
   }
   .about-grid, .project-feature {
