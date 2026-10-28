@@ -594,7 +594,7 @@ html[lang="en"] .lang-slider,
   grid-template-columns: auto auto 1fr;
   gap: 12px 28px;
   list-style: none;
-  margin-bottom: 28px;
+  margin: 24px 0 12px;
   padding: 14px 0;
   border-top: 1px solid var(--line-gold);
   border-bottom: 1px solid var(--line);
@@ -616,7 +616,7 @@ html[lang="en"] .lang-slider,
 }
 
 .hero-profile-label {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 1.5px;
   color: var(--gold);
@@ -988,7 +988,7 @@ h2 em {
   gap: 8px 12px;
   margin-top: 24px;
   list-style: none;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .busgo-stack li, .techsupport-stack li {
@@ -1038,7 +1038,14 @@ h2 em {
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--panel);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Cover previews open in the existing full-size viewer. */
+.busgo-cover > a img, .techsupport-cover > a img {
+  height: clamp(180px, 35vw, 480px);
+  object-fit: cover;
+  object-position: top;
 }
 
 .busgo-expand, .techsupport-expand {
@@ -1068,7 +1075,7 @@ h2 em {
   gap: 8px 24px;
   margin-top: 14px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .busgo-screen-title, .techsupport-screen-title {
@@ -1084,7 +1091,7 @@ h2 em {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(198, 168, 117, 0.12);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(198, 168, 117, 0.12);
 }
 
 .busgo-section-heading, .techsupport-section-heading {
@@ -1141,12 +1148,12 @@ h2 em {
 }
 
 .busgo-screen-scroll, .techsupport-screen-scroll {
-  max-height: 780px;
+  max-height: min(560px, 65vh);
   overflow: auto;
   scrollbar-gutter: stable;
 }
 
-.busgo-screen-scroll:focus-visible, .project-viewer-scroll:focus-visible {
+.busgo-screen-scroll:focus-visible, .techsupport-screen-scroll:focus-visible, .project-viewer-scroll:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
@@ -1281,7 +1288,7 @@ h2 em {
   }
 
   .busgo-screen-scroll, .techsupport-screen-scroll {
-    max-height: 520px;
+    max-height: min(400px, 60vh);
   }
 
   .busgo-tabs button, .techsupport-tabs button {
@@ -1293,7 +1300,7 @@ h2 em {
     top: 8px;
     right: 8px;
     padding: 6px 10px;
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .project-viewer {
@@ -1623,7 +1630,7 @@ h2 em {
 
 .tags span {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   padding: 5px 12px;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -1950,7 +1957,7 @@ h2 em {
 .timeline-items {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
   position: relative;
 }
 
@@ -2028,7 +2035,7 @@ h2 em {
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
-  padding: 26px 28px;
+  padding: 22px 24px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
               opacity 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -2057,7 +2064,7 @@ h2 em {
 }
 
 .timeline-chapter {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 1.5px;
   color: var(--muted);
@@ -2086,7 +2093,7 @@ h2 em {
 }
 
 .timeline-badge small {
-  font-size: 10.5px;
+  font-size: 11.5px;
   color: var(--muted);
   border-left: 1px solid var(--line);
   padding-left: 8px;
@@ -2112,7 +2119,7 @@ h2 em {
   color: var(--muted);
   font-size: 14.5px;
   line-height: 1.75;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 
@@ -2123,7 +2130,7 @@ h2 em {
 }
 
 .timeline-tags span {
-  font-size: 11px;
+  font-size: 12px;
   padding: 4px 10px;
   border: 1px solid var(--line);
   border-radius: 2px;
@@ -2140,8 +2147,8 @@ h2 em {
 
 /* Major milestones break the alternating rhythm with full-width editorial cards. */
 .timeline-highlight:nth-child(n) {
-  padding: 24px 0 0;
-  margin-block: 16px;
+  padding: 20px 0 0;
+  margin-block: 12px;
 }
 
 .timeline-highlight .timeline-node {
@@ -2379,7 +2386,7 @@ h2 em {
   }
 
   .timeline-items {
-    gap: 24px;
+    gap: 20px;
   }
 
   .timeline-card {
@@ -2871,7 +2878,7 @@ h2 em {
     margin-bottom: 32px;
   }
   .section-index {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 1.5px;
     margin-bottom: 28px;
   }
@@ -2932,7 +2939,7 @@ h2 em {
   }
   .eyebrow {
     letter-spacing: 1px;
-    font-size: 10px;
+    font-size: 11px;
   }
   .hero .eyebrow {
     font-size: 12px;

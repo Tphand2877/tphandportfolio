@@ -18,14 +18,14 @@
   --text: #1d1f1c;
   --muted: #5e625a;
   --muted-dark: #3b3e37;
-  --gold: #8f743e;
+  --gold: #705828;
   --gold-bright: #705828;
   --gold-dark: #59451d;
   --gold-glow: rgba(143, 116, 62, 0.15);
-  --gold-gradient: linear-gradient(135deg, #a88d53 0%, #8f743e 50%, #705828 100%);
+  --gold-gradient: linear-gradient(135deg, #dfcfa8 0%, #cdb680 50%, #bda16a 100%);
   --line: rgba(29, 31, 28, 0.1);
   --line-gold: rgba(143, 116, 62, 0.45);
-  --cyan: #0284c7;
+  --cyan: #006798;
   --cyan-glow: rgba(2, 132, 199, 0.12);
   --cyan-line: rgba(2, 132, 199, 0.3);
   --text-secondary: #475569;
@@ -55,7 +55,7 @@
 }
 
 [data-theme="light"] .language-switch button[aria-pressed="true"] {
-  color: #ffffff;
+  color: #1d1f1c;
 }
 
 [data-theme="light"] .theme-toggle {
@@ -72,7 +72,7 @@
 
 [data-theme="light"] .theme-toggle:hover .theme-icon-wrap {
   background: var(--gold-gradient);
-  color: #ffffff;
+  color: #1d1f1c;
 }
 
 [data-theme="light"] .header {
@@ -105,7 +105,7 @@
 [data-theme="light"] .busgo-tabs button[aria-selected="true"],
 [data-theme="light"] .techsupport-tabs button[aria-selected="true"] {
   background: var(--gold-gradient);
-  color: #ffffff;
+  color: #1d1f1c;
   border-color: var(--gold);
   box-shadow: 0 2px 10px rgba(143, 116, 62, 0.35);
 }
@@ -258,11 +258,11 @@
 }
 
 [data-theme="light"] .button-gold {
-  color: #fffdf8;
+  color: #1d1f1c;
 }
 
 [data-theme="light"] .language-switch button[aria-pressed="true"] {
-  color: #fffdf8;
+  color: #1d1f1c;
 }
 
 [data-theme="light"] .filter.active {
