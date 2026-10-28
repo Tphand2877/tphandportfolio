@@ -29,6 +29,14 @@
   --cyan-glow: rgba(2, 132, 199, 0.12);
   --cyan-line: rgba(2, 132, 199, 0.3);
   --text-secondary: #475569;
+  --glass-bg: rgba(244, 240, 230, 0.85);
+  --glass-border: rgba(143, 116, 62, 0.28);
+  --gold-chip-bg: rgba(143, 116, 62, 0.08);
+  --gold-chip-border: rgba(143, 116, 62, 0.28);
+  --gold-chip-color: #6d5423;
+  --tab-bg: rgba(255, 255, 255, 0.75);
+  --tab-border: rgba(143, 116, 62, 0.32);
+  --tab-color: var(--muted-dark);
 }
 
 [data-theme="light"] .language-switch {
@@ -69,6 +77,118 @@
 
 [data-theme="light"] .header {
   background: var(--bg);
+}
+
+/* Button outline in light mode */
+[data-theme="light"] .button-outline {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(143, 116, 62, 0.4);
+  color: var(--text);
+}
+
+[data-theme="light"] .button-outline:hover {
+  background: rgba(143, 116, 62, 0.12);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+/* Tech chips hover in light mode */
+[data-theme="light"] .busgo-stack li:hover,
+[data-theme="light"] .techsupport-stack li:hover {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: var(--cyan);
+  color: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan-glow);
+}
+
+/* Tabs active in light mode */
+[data-theme="light"] .busgo-tabs button[aria-selected="true"],
+[data-theme="light"] .techsupport-tabs button[aria-selected="true"] {
+  background: var(--gold-gradient);
+  color: #ffffff;
+  border-color: var(--gold);
+  box-shadow: 0 2px 10px rgba(143, 116, 62, 0.35);
+}
+
+/* Modules & Admin in light mode */
+[data-theme="light"] .busgo-admin,
+[data-theme="light"] .techsupport-modules {
+  background: rgba(240, 236, 225, 0.85);
+  border-color: rgba(143, 116, 62, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Profile in light mode */
+[data-theme="light"] .hero-profile {
+  background: rgba(244, 240, 230, 0.85);
+  border-color: rgba(143, 116, 62, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .hero-profile strong {
+  color: #1d1f1c;
+}
+
+[data-theme="light"] .hero-profile-label {
+  color: #705828;
+}
+
+/* Gear Cards in light mode */
+[data-theme="light"] .gear-card {
+  background: rgba(244, 240, 230, 0.85);
+  border-color: rgba(143, 116, 62, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .tags span {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(29, 31, 28, 0.12);
+  color: var(--text);
+}
+
+[data-theme="light"] .tags span:hover {
+  background: rgba(143, 116, 62, 0.1);
+  border-color: var(--gold);
+  color: var(--gold-bright);
+}
+
+/* Contact panel in light mode */
+[data-theme="light"] .contact-bottom {
+  background: rgba(240, 236, 225, 0.85);
+  border-color: rgba(143, 116, 62, 0.35);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
+}
+
+/* Timeline card in light mode */
+[data-theme="light"] .timeline-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(143, 116, 62, 0.28);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .timeline-badge {
+  background: rgba(143, 116, 62, 0.1);
+  border-color: rgba(143, 116, 62, 0.3);
+  color: var(--gold-bright);
+}
+
+[data-theme="light"] .timeline-tags span {
+  background: rgba(143, 116, 62, 0.08);
+  border-color: rgba(143, 116, 62, 0.22);
+  color: var(--muted-dark);
+}
+
+/* Expand buttons in light mode */
+[data-theme="light"] .busgo-expand,
+[data-theme="light"] .techsupport-expand {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  border-color: rgba(143, 116, 62, 0.4);
+}
+
+[data-theme="light"] .busgo-image-link:hover .busgo-expand,
+[data-theme="light"] .techsupport-image-link:hover .techsupport-expand {
+  background: var(--panel-elevated);
 }
 
 [data-theme="light"] .mobile-nav:not([hidden]) {
