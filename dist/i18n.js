@@ -335,7 +335,7 @@
     button.setAttribute('title', label);
     button.setAttribute('aria-pressed', String(isLight));
     button.querySelector('.theme-label').textContent = t(isLight ? 'dark' : 'light');
-    document.querySelector('meta[name="theme-color"]').content = isLight ? '#f8f6f0' : '#0d0f0e';
+    document.querySelector('meta[name="theme-color"]').content = isLight ? '#f8f6f0' : '#08090B';
   }
 
   function setLanguage(next, persist = true) {
@@ -368,12 +368,65 @@
   document.querySelectorAll('[data-language]').forEach(button => {
     button.addEventListener('click', () => setLanguage(button.dataset.language));
   });
-  document.querySelector('.theme-toggle').addEventListener('click', () => {
+  function toggleTheme(event) {
     const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-    document.documentElement.dataset.theme = next;
-    save('portfolio-theme', next);
-    updateThemeControl();
-    document.dispatchEvent(new CustomEvent('portfolio:themechange'));
-  });
+    const applyTheme = () => {
+      document.documentElement.dataset.theme = next;
+      save('portfolio-theme', next);
+      updateThemeControl();
+      document.dispatchEvent(new CustomEvent('portfolio:themechange'));
+    };
+
+    const motionQuery = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (motionQuery && motionQuery.matches) {
+      applyTheme();
+      return;
+    }
+
+    if (typeof document.startViewTransition === 'function') {
+      const button = document.querySelector('.theme-toggle');
+      const rect = button ? button.getBoundingClientRect() : { left: window.innerWidth - 60, top: 45, width: 40, height: 40 };
+      const x = event && typeof event.clientX === 'number' && event.clientX > 0 ? event.clientX : rect.left + rect.width / 2;
+      const y = event && typeof event.clientY === 'number' && event.clientY > 0 ? event.clientY : rect.top + rect.height / 2;
+      const endRadius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      const transition = document.startViewTransition(() => {
+        applyTheme();
+      });
+
+      transition.ready.then(() => {
+        const clipPath = [
+          `circle(0px at ${x}px ${y}px)`,
+          `circle(${endRadius}px at ${x}px ${y}px)`
+        ];
+        document.documentElement.animate(
+          {
+            clipPath: next === 'light' ? clipPath : [...clipPath].reverse()
+          },
+          {
+            duration: 520,
+            easing: 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+            pseudoElement: next === 'light' ? '::view-transition-new(root)' : '::view-transition-old(root)'
+          }
+        );
+      }).catch(() => {
+        applyTheme();
+      });
+    } else {
+      document.documentElement.classList.add('theme-transitioning');
+      applyTheme();
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 500);
+    }
+  }
+
+  const themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+  }
   setLanguage(language, false);
 })();
