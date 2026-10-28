@@ -2466,6 +2466,41 @@ h2 em {
   gap: 12px;
 }
 
+.contact-connect {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  max-width: 100%;
+}
+
+.contact-social {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.contact-social > span {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.contact-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--text);
+  font-size: 13px;
+  transition: color 0.24s ease;
+}
+
+.contact-social a:hover {
+  color: var(--gold);
+}
+
 .email-link {
   font-family: var(--serif);
   font-size: clamp(24px, 3.2vw, 42px);
