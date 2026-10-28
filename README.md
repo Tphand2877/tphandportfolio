@@ -58,6 +58,8 @@ Nút tải CV ở hero dùng `Thuan-Phan_CV.pdf` khi chọn VI và `Peter-Phan_C
 
 Website không có biểu mẫu gửi dữ liệu; mục Kết nối có email, điện thoại, GitHub và liên kết Facebook `facebook.com/Tphand07`, Instagram `instagram.com/tphand287`, TikTok `tiktok.com/@tphand` (mở tab mới). Font Be Vietnam Pro và Cormorant Garamond tải từ Google Fonts, có font dự phòng. Lựa chọn theme/ngôn ngữ lưu ở localStorage; nếu bị chặn, nút vẫn hoạt động trong phiên.
 
+Khi thay `styles.css` hoặc `i18n.js`, đổi giá trị `?v=` của tệp tương ứng trong `dist/index.html` trước khi triển khai để trình duyệt không dùng CSS hoặc bản dịch cũ với HTML mới. HTML trên GitHub Pages vẫn có thể được lưu cache trong một khoảng thời gian.
+
 ## Kiểm tra khi cập nhật
 
 Kiểm tra VI/EN và sáng/tối ở320,375,820 và1440px: không tràn ngang, menu không che/mất, hero có lời giới thiệu và CTA trước ảnh trên mobile. Thử ba liên kết cột mốc, GitHub ở hero và tải đúng CV PDF sau khi đổi ngôn ngữ. Kiểm tra card giải thưởng, TechSupport và INTI ở bố cục một/hai cột. Thử mọi bộ lọc, đếm ảnh, mở ảnh, mũi tên, Escape, nhấp nền và focus trở lại card. Dialog đóng không chiếm chiều cao hoặc nhận focus. Kiểm tra11 chương vẫn hiện khi tắt JavaScript hoặc bật reduced motion; thử chuyển reduced motion ngay trong phiên. Xác nhận credit và mọi liên kết/ảnh mới trước khi công bố.
