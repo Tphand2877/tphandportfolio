@@ -56,7 +56,7 @@ Nút tải CV ở hero dùng `Thuan-Phan_CV.pdf` khi chọn VI và `Peter-Phan_C
 
 `social-card.jpg` là ảnh chia sẻ1200×630 dùng hình cá nhân và thông tin ICTU/TechSupport. Canonical, `og:url`, `og:image` và `twitter:image` hiện giữ domain triển khai có sẵn trong dự án. Nếu đổi domain, cập nhật tất cả các URL tuyệt đối này cùng nhau trước khi deploy. Hai ngôn ngữ hiện dùng cùng URL; metadata được dịch khi chuyển EN nhưng không có URL/hreflang riêng.
 
-Website không có biểu mẫu gửi dữ liệu; mục Kết nối có email, điện thoại, GitHub và liên kết Facebook `facebook.com/Tphand07`, Instagram `instagram.com/tphand287` (mở tab mới). Font Be Vietnam Pro và Cormorant Garamond tải từ Google Fonts, có font dự phòng. Lựa chọn theme/ngôn ngữ lưu ở localStorage; nếu bị chặn, nút vẫn hoạt động trong phiên.
+Website không có biểu mẫu gửi dữ liệu; mục Kết nối có email, điện thoại, GitHub và liên kết Facebook `facebook.com/Tphand07`, Instagram `instagram.com/tphand287`, TikTok `tiktok.com/@tphand` (mở tab mới). Font Be Vietnam Pro và Cormorant Garamond tải từ Google Fonts, có font dự phòng. Lựa chọn theme/ngôn ngữ lưu ở localStorage; nếu bị chặn, nút vẫn hoạt động trong phiên.
 
 ## Kiểm tra khi cập nhật
 

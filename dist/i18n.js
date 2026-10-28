@@ -278,6 +278,7 @@
     'contact.social': 'Social',
     'contact.facebookLabel': 'Thuận Phan’s Facebook profile (opens in a new tab)',
     'contact.instagramLabel': 'Thuận Phan’s Instagram profile (opens in a new tab)',
+    'contact.tiktokLabel': 'Thuận Phan’s TikTok profile (opens in a new tab)',
     'contact.copyPhone': 'Copy phone',
     'contact.copyPhoneLabel': 'Copy phone number',
     'footer.brand': 'PETER PHAN<span>CODING - TECHNOLOGY - PHOTOGRAPHY</span>',
